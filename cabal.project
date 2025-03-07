@@ -1,0 +1,13 @@
+packages: .
+
+write-ghc-environment-files: always
+
+package clash-prelude
+  flags: -multiple-hidden
+  ghc-options: +RTS -qn8 -A64M -RTS -j8
+
+source-repository-package
+  type: git
+  location: https://github.com/clash-lang/clash-compiler.git
+  tag: 45d09f609c16f04188fd8e658d51953dd888ee9a
+  subdir: clash-prelude
